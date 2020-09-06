@@ -10,19 +10,20 @@ namespace CompositePattern
         {
             //Form objects
 
-            Employee lakshman = new Employee("Lakshman", 4);
-            Employee ram = new Employee("Ram", 3);
-            Supervisor vibhisan = new Supervisor("Vibhisan", 3);
-            Supervisor ravan = new Supervisor("Ravan", 4);
+            Employee sde1 = new Employee("Meetali", 4);
+            Employee sde2 = new Employee("Pradeep", 3);
+            Supervisor pm = new Supervisor("Pragati", 3);
+            Supervisor spm = new Supervisor("Saroj", 4);
 
-            vibhisan.AddReportee(lakshman);
-            vibhisan.AddReportee(ram);
-            ravan.AddReportee(vibhisan);
+            pm.AddReportee(sde1);
+            pm.AddReportee(sde2);
+
+            spm.AddReportee(pm);
 
 
             //Actual operation 
 
-            vibhisan.ShowRating();
+            spm.ShowRating();
             Console.ReadLine();
 
 
